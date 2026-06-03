@@ -234,11 +234,40 @@ p { max-width: 68ch; }
   align-items: center;
 }
 
+.hero-image {
+  position: relative;
+  transform: translateY(0.55rem);
+  min-width: 420px;
+}
+
+.hero-image-face {
+  position: absolute;
+  top: 26px;
+  left: 20px;
+  width: 68%;
+  height: 72%;
+  border: 2px solid rgba(255,183,107,0.2);
+  border-radius: 32px;
+  z-index: -1;
+  backdrop-filter: blur(8px);
+}
+
 .hero-text {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 1.2rem;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.hero-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .hero-text .section-label {
@@ -273,11 +302,7 @@ p { max-width: 68ch; }
   line-height: 1.85;
 }
 
-.hero-cta {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
+.hero-actions .btn { min-width: 170px; }
 
 .btn {
   display: inline-block;
@@ -412,83 +437,74 @@ p { max-width: 68ch; }
    SEZIONE PASSIONI
    ============================================================ */
 .passioni {
-  background: linear-gradient(180deg, rgba(7,31,56,0.98) 0%, rgba(7,31,56,0.92) 100%);
+  background: linear-gradient(180deg, rgba(7,31,56,0.98) 0%, rgba(7,31,56,0.96) 100%);
 }
 
 .passioni-intro {
   text-align: center;
   max-width: 60ch;
   margin: 0 auto 4.5rem;
-  color: rgba(247,249,255,0.75);
+  color: rgba(247,249,255,0.78);
   font-size: 1rem;
   font-style: italic;
   font-family: var(--font-display);
 }
 
-.passioni-list {
+.passioni-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 2rem;
 }
 
-.passione-item {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 28px;
+.passione-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 32px;
   overflow: hidden;
-  box-shadow: 0 26px 60px rgba(0,18,34,0.2);
+  box-shadow: 0 32px 78px rgba(0,18,34,0.18);
   display: flex;
   flex-direction: column;
-  min-height: 420px;
 }
 
-.passione-item.reverse {
-  grid-column: auto;
-}
-
-.passione-img {
-  overflow: hidden;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+.passione-card-media {
   position: relative;
   min-height: 240px;
+  overflow: hidden;
 }
 
-.passione-img::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0) 45%);
-  pointer-events: none;
-}
-
-.passione-img img {
+.passione-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease, filter 0.4s ease;
   filter: grayscale(8%);
 }
-.passione-img:hover img {
-  transform: scale(1.06);
+.passione-card-media:hover img {
+  transform: scale(1.08);
   filter: grayscale(0%);
 }
 
-.passione-text {
+.passione-card-body {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 1rem;
 }
 
-.passione-text h3 {
-  margin-bottom: 0.8rem;
+.passione-card-body .section-label {
+  background: rgba(93,215,200,0.12);
+  color: var(--color-accent);
+}
+
+.passione-card-body h3 {
+  margin: 0;
   color: var(--color-ink);
 }
 
-.passione-text p {
-  color: rgba(244,247,251,0.82);
-  line-height: 1.85;
+.passione-card-body p {
+  color: rgba(244,247,251,0.85);
+  line-height: 1.9;
+  margin: 0;
 }
 
 /* ============================================================
@@ -969,6 +985,8 @@ p { max-width: 68ch; }
    ============================================================ */
 @media (max-width: 1024px) {
   .hero-inner { grid-template-columns: 1fr 300px; gap: 3rem; }
+  .hero-image { min-width: auto; }
+  .hero-actions { justify-content: flex-start; }
   .chi-sono-grid { gap: 3rem; }
   .edcivica-section { grid-template-columns: 1fr 320px; }
   .pcto-intro-grid { grid-template-columns: 1fr 280px; }
@@ -990,16 +1008,18 @@ p { max-width: 68ch; }
     text-align: center;
     gap: 2.5rem;
   }
-  .hero-image { max-width: 240px; margin: 0 auto; }
+  .hero-image {
+    max-width: 280px;
+    margin: 0 auto;
+    min-width: auto;
+  }
   .hero-image::before { display: none; }
-  .hero-cta { justify-content: center; }
+  .hero-actions { justify-content: center; }
   .hero-welcome { margin: 0 auto 2.75rem; }
 
   .chi-sono-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .chi-sono-image img { aspect-ratio: 16/9; }
-
-  .passione-item,
-  .passione-item.reverse { grid-template-columns: 1fr; direction: ltr; gap: 1.5rem; }
+  .passioni-grid { grid-template-columns: 1fr; }
 
   .edcivica-section,
   .edcivica-section.reverse { grid-template-columns: 1fr; direction: ltr; }
