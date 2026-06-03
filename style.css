@@ -200,29 +200,27 @@ p { max-width: 68ch; }
   display: flex;
   align-items: center;
   padding: 5rem 2rem;
-  background: linear-gradient(135deg, #071f38 0%, #0c2e55 42%, #132f5f 100%);
+  background: linear-gradient(135deg, #071f38 0%, #0c2f59 38%, #142f62 100%);
   position: relative;
   overflow: hidden;
 }
 
-/* Griglia di punti decorativa */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, rgba(93,215,200,0.12) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-image: radial-gradient(circle, rgba(255,183,107,0.12) 1px, transparent 1px);
+  background-size: 28px 28px;
   pointer-events: none;
-  mask-image: radial-gradient(ellipse 70% 70% at 86% 35%, black 0%, transparent 78%);
+  mask-image: radial-gradient(ellipse 65% 65% at 82% 35%, black 0%, transparent 78%);
 }
 
-/* Alone verde/arancio in basso a sinistra */
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -20%; left: -15%;
-  width: 58%; height: 66%;
-  background: radial-gradient(ellipse, rgba(255,183,107,0.14) 0%, rgba(93,215,200,0.16) 35%, transparent 68%);
+  bottom: -20%; left: -14%;
+  width: 52%; height: 64%;
+  background: radial-gradient(ellipse, rgba(255,183,107,0.14) 0%, rgba(93,215,200,0.2) 28%, transparent 68%);
   pointer-events: none;
 }
 
@@ -231,39 +229,48 @@ p { max-width: 68ch; }
   margin: 0 auto;
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) 420px;
-  gap: 5rem;
+  grid-template-columns: 420px minmax(0, 1.2fr);
+  gap: 4.5rem;
   align-items: center;
 }
 
-.hero-text .section-label { margin-bottom: 1.4rem; }
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.hero-text .section-label {
+  margin-bottom: 0;
+}
 
 .hero-name {
   font-family: var(--font-display);
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(3rem, 6vw, 5.4rem);
   line-height: 1.02;
   color: var(--color-ink);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
   font-style: italic;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
 }
 
 .hero-subtitle {
-  font-size: 1rem;
+  font-size: 0.98rem;
   color: var(--color-accent2);
-  font-weight: 600;
-  margin-bottom: 1.3rem;
-  letter-spacing: 0.08em;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
 }
 
 .hero-welcome {
-  font-size: 1.08rem;
-  color: var(--color-ink);
-  opacity: 0.9;
-  margin-bottom: 2.5rem;
-  max-width: 52ch;
-  line-height: 1.75;
+  font-size: 1.1rem;
+  color: rgba(244,247,251,0.92);
+  opacity: 0.95;
+  margin-bottom: 2rem;
+  max-width: 54ch;
+  line-height: 1.85;
 }
 
 .hero-cta {
@@ -308,7 +315,7 @@ p { max-width: 68ch; }
 
 .hero-image {
   position: relative;
-  transform: translateY(0.45rem);
+  transform: translateY(0.55rem);
   min-width: 420px;
 }
 
@@ -317,24 +324,23 @@ p { max-width: 68ch; }
   aspect-ratio: 1;
   object-fit: cover;
   border-radius: 32px;
-  box-shadow: 0 38px 98px rgba(0,18,34,0.42);
-  filter: grayscale(12%) contrast(0.95);
+  box-shadow: 0 42px 110px rgba(0,18,34,0.45);
+  filter: grayscale(10%) contrast(0.98);
   transition: filter var(--transition), transform 0.35s ease, box-shadow var(--transition);
 }
 .hero-image:hover img {
-  filter: grayscale(0%) contrast(1.02);
-  transform: scale(1.05);
-  box-shadow: 0 42px 108px rgba(0,18,34,0.5);
+  filter: grayscale(0%) contrast(1.05);
+  transform: scale(1.06);
+  box-shadow: 0 48px 118px rgba(0,18,34,0.52);
 }
 
-/* Cornice decorativa */
 .hero-image::before {
   content: '';
   position: absolute;
   top: 18px; left: -16px;
   width: 100%; height: 100%;
-  border: 1px solid rgba(255,183,107,0.35);
-  border-radius: 28px;
+  border: 2px solid rgba(255,183,107,0.42);
+  border-radius: 32px;
   opacity: 0.45;
   z-index: -1;
 }
@@ -343,7 +349,7 @@ p { max-width: 68ch; }
    SEZIONE CHI SONO
    ============================================================ */
 .chi-sono {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.04);
   border-top: 1px solid rgba(255,255,255,0.08);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
@@ -352,34 +358,45 @@ p { max-width: 68ch; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5rem;
-  align-items: start;
+  align-items: center;
 }
 
 .chi-sono-image {
   position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: 0 34px 80px rgba(0,18,34,0.22);
 }
 
 .chi-sono-image img {
   width: 100%;
   aspect-ratio: 3/4;
   object-fit: cover;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
-  filter: grayscale(15%);
+  filter: grayscale(10%) contrast(0.96);
+  transition: filter var(--transition), transform 0.35s ease;
+}
+.chi-sono-image:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.02);
 }
 
 .chi-sono-image::after {
   content: '';
   position: absolute;
-  bottom: -10px; right: -10px;
-  width: 75%; height: 75%;
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-lg);
-  opacity: 0.2;
+  bottom: -14px; right: -14px;
+  width: 78%; height: 78%;
+  border: 1px solid rgba(255,183,107,0.22);
+  border-radius: 32px;
+  opacity: 0.35;
   z-index: -1;
 }
 
-.chi-sono-content { display: flex; flex-direction: column; gap: 2.5rem; }
+.chi-sono-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
 
 .chi-sono-block h3 {
   margin-bottom: 0.75rem;
@@ -395,58 +412,84 @@ p { max-width: 68ch; }
    SEZIONE PASSIONI
    ============================================================ */
 .passioni {
-  background: linear-gradient(180deg, rgba(7,31,56,0.98) 0%, rgba(7,31,56,0.9) 100%);
+  background: linear-gradient(180deg, rgba(7,31,56,0.98) 0%, rgba(7,31,56,0.92) 100%);
 }
 
 .passioni-intro {
   text-align: center;
   max-width: 60ch;
   margin: 0 auto 4.5rem;
-  color: var(--color-muted);
+  color: rgba(247,249,255,0.75);
   font-size: 1rem;
   font-style: italic;
   font-family: var(--font-display);
 }
 
-.passioni-list { display: flex; flex-direction: column; gap: 5rem; }
+.passioni-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
 
 .passione-item {
-  display: grid;
-  grid-template-columns: 1.3fr 0.9fr;
-  gap: 4rem;
-  align-items: center;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 26px 60px rgba(0,18,34,0.2);
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
 }
 
 .passione-item.reverse {
-  grid-template-columns: 0.9fr 1.3fr;
+  grid-column: auto;
 }
 
 .passione-img {
   overflow: hidden;
-  border-radius: 24px;
-  box-shadow: 0 18px 45px rgba(0,18,34,0.18);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   position: relative;
+  min-height: 240px;
 }
 
 .passione-img::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,183,107,0.18) 0%, rgba(87,215,194,0.1) 55%, transparent 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0) 45%);
   pointer-events: none;
 }
 
 .passione-img img {
   width: 100%;
-  aspect-ratio: 4/3;
+  height: 100%;
   object-fit: cover;
-  transition: transform 0.5s ease;
-  filter: grayscale(10%);
+  transition: transform 0.5s ease, filter 0.4s ease;
+  filter: grayscale(8%);
 }
-.passione-img:hover img { transform: scale(1.04); filter: grayscale(0%); }
+.passione-img:hover img {
+  transform: scale(1.06);
+  filter: grayscale(0%);
+}
 
-.passione-text h3 { margin-bottom: 1rem; }
-.passione-text p { color: var(--color-muted); line-height: 1.8; }
+.passione-text {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.passione-text h3 {
+  margin-bottom: 0.8rem;
+  color: var(--color-ink);
+}
+
+.passione-text p {
+  color: rgba(244,247,251,0.82);
+  line-height: 1.85;
+}
 
 /* ============================================================
    PAGE HERO (pagine interne)
