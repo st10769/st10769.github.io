@@ -4,14 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-  --color-bg:       #07111d;
-  --color-surface:  #0f1d31;
-  --color-surface2: #15273c;
-  --color-ink:      #f4f7fb;
-  --color-muted:    #8fa6c1;
-  --color-accent:   #5dd7c8;
-  --color-accent2:  #f1b76d;
-  --color-border:   #20324b;
+  --color-bg:       #071f38;
+  --color-surface:  #102a45;
+  --color-surface2: #183555;
+  --color-ink:      #f8fbff;
+  --color-muted:    #a7bbd1;
+  --color-accent:   #57d7c2;
+  --color-accent2:  #ffb76b;
+  --color-border:   #204057;
 
   --font-display: 'Lora', Georgia, serif;
   --font-body:    'Space Grotesk', system-ui, sans-serif;
@@ -35,7 +35,9 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: radial-gradient(circle at top left, rgba(93,215,200,0.12), transparent 30%), var(--color-bg);
+  background: radial-gradient(circle at top left, rgba(87,215,194,0.16), transparent 25%),
+              radial-gradient(circle at bottom right, rgba(255,183,107,0.08), transparent 22%),
+              var(--color-bg);
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 1rem;
@@ -198,7 +200,7 @@ p { max-width: 68ch; }
   display: flex;
   align-items: center;
   padding: 5rem 2rem;
-  background: linear-gradient(180deg, rgba(7,17,29,0.98) 0%, rgba(7,17,29,0.98) 60%, transparent 100%);
+  background: linear-gradient(135deg, #071f38 0%, #0c2e55 42%, #132f5f 100%);
   position: relative;
   overflow: hidden;
 }
@@ -214,13 +216,13 @@ p { max-width: 68ch; }
   mask-image: radial-gradient(ellipse 70% 70% at 86% 35%, black 0%, transparent 78%);
 }
 
-/* Alone verde in basso a sinistra */
+/* Alone verde/arancio in basso a sinistra */
 .hero::after {
   content: '';
   position: absolute;
-  bottom: -18%; left: -12%;
-  width: 50%; height: 65%;
-  background: radial-gradient(ellipse, rgba(93,215,200,0.14) 0%, transparent 62%);
+  bottom: -20%; left: -15%;
+  width: 58%; height: 66%;
+  background: radial-gradient(ellipse, rgba(255,183,107,0.14) 0%, rgba(93,215,200,0.16) 35%, transparent 68%);
   pointer-events: none;
 }
 
@@ -247,20 +249,21 @@ p { max-width: 68ch; }
 }
 
 .hero-subtitle {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--color-accent2);
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.04em;
+  font-weight: 600;
+  margin-bottom: 1.3rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .hero-welcome {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--color-ink);
-  opacity: 0.8;
-  margin-bottom: 2.75rem;
-  max-width: 50ch;
-  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2.5rem;
+  max-width: 52ch;
+  line-height: 1.75;
 }
 
 .hero-cta {
@@ -283,13 +286,13 @@ p { max-width: 68ch; }
 }
 
 .btn-primary {
-  background: var(--color-accent);
-  color: #0E0F13;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent2));
+  color: #091e2f;
 }
 .btn-primary:hover {
-  background: var(--color-accent2);
+  background: linear-gradient(135deg, rgba(93,215,200,0.95), rgba(255,183,107,0.95));
   transform: translateY(-1px);
-  box-shadow: 0 0 24px rgba(241,183,109,0.28);
+  box-shadow: 0 0 24px rgba(255,183,107,0.22);
 }
 
 .btn-secondary {
@@ -305,21 +308,23 @@ p { max-width: 68ch; }
 
 .hero-image {
   position: relative;
-  transform: translateY(0.8rem);
+  transform: translateY(0.45rem);
+  min-width: 420px;
 }
 
 .hero-image img {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  border-radius: 28px;
-  box-shadow: 0 28px 68px rgba(0,18,34,0.42);
-  filter: grayscale(16%);
-  transition: filter var(--transition), transform 0.35s ease;
+  border-radius: 32px;
+  box-shadow: 0 38px 98px rgba(0,18,34,0.42);
+  filter: grayscale(12%) contrast(0.95);
+  transition: filter var(--transition), transform 0.35s ease, box-shadow var(--transition);
 }
 .hero-image:hover img {
-  filter: grayscale(0%);
-  transform: scale(1.02);
+  filter: grayscale(0%) contrast(1.02);
+  transform: scale(1.05);
+  box-shadow: 0 42px 108px rgba(0,18,34,0.5);
 }
 
 /* Cornice decorativa */
@@ -328,9 +333,9 @@ p { max-width: 68ch; }
   position: absolute;
   top: 18px; left: -16px;
   width: 100%; height: 100%;
-  border: 1px solid rgba(93,215,200,0.3);
+  border: 1px solid rgba(255,183,107,0.35);
   border-radius: 28px;
-  opacity: 0.35;
+  opacity: 0.45;
   z-index: -1;
 }
 
@@ -338,9 +343,9 @@ p { max-width: 68ch; }
    SEZIONE CHI SONO
    ============================================================ */
 .chi-sono {
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  background: rgba(255,255,255,0.03);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
 .chi-sono-grid {
@@ -390,7 +395,7 @@ p { max-width: 68ch; }
    SEZIONE PASSIONI
    ============================================================ */
 .passioni {
-  background: var(--color-bg);
+  background: linear-gradient(180deg, rgba(7,31,56,0.98) 0%, rgba(7,31,56,0.9) 100%);
 }
 
 .passioni-intro {
@@ -427,7 +432,7 @@ p { max-width: 68ch; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(74,230,138,0.05) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(255,183,107,0.18) 0%, rgba(87,215,194,0.1) 55%, transparent 100%);
   pointer-events: none;
 }
 
