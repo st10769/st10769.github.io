@@ -4,15 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
-  --color-bg:       #071f38;
-  --color-surface:  rgba(11,23,42,0.92);
-  --color-surface2: rgba(16,42,69,0.94);
-  --color-ink:      #f8fbff;
-  --color-muted:    #a7bbd1;
-  --color-accent:   #57d7c2;
-  --color-accent2:  #ffb76b;
-  --color-border:   rgba(255,255,255,0.08);
-  --color-shadow:   rgba(0,0,0,0.32);
+  --color-bg:       #07172d;
+  --color-surface:  rgba(18,34,58,0.96);
+  --color-surface2: rgba(16,38,68,0.96);
+  --color-ink:      #f7fbff;
+  --color-muted:    #c5d2e5;
+  --color-accent:   #4ed1bf;
+  --color-accent2:  #ffc683;
+  --color-border:   rgba(255,255,255,0.14);
+  --color-shadow:   rgba(0,0,0,0.35);
 
   --font-display: 'Lora', Georgia, serif;
   --font-body:    'Space Grotesk', system-ui, sans-serif;
@@ -35,9 +35,9 @@ html { scroll-behavior: smooth; }
 
 body {
   min-height: 100vh;
-  background: radial-gradient(circle at top left, rgba(87,215,194,0.12), transparent 20%),
-              radial-gradient(circle at bottom right, rgba(255,183,107,0.08), transparent 30%),
-              linear-gradient(180deg, #061526 0%, #091d33 100%);
+  background: radial-gradient(circle at top left, rgba(78,209,191,0.14), transparent 18%),
+              radial-gradient(circle at bottom right, rgba(255,198,131,0.10), transparent 28%),
+              linear-gradient(180deg, #07172d 0%, #0c2b55 100%);
   color: var(--color-ink);
   font-family: var(--font-body);
   font-size: 1rem;
@@ -217,10 +217,12 @@ p { max-width: 70ch; }
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 2rem;
+  color: var(--color-ink);
 }
 
 .section-pad {
   padding: 6rem 0;
+  color: var(--color-ink);
 }
 
 /* ============================================================
@@ -388,9 +390,10 @@ p { max-width: 70ch; }
    ============================================================ */
 
 .chi-sono {
-  background: rgba(255,255,255,0.04);
-  border-top: 1px solid rgba(255,255,255,0.08);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.10);
+  border-top: 1px solid rgba(255,255,255,0.14);
+  border-bottom: 1px solid rgba(255,255,255,0.14);
+  color: var(--color-ink);
 }
 
 .chi-sono-grid {
@@ -456,7 +459,8 @@ p { max-width: 70ch; }
    ============================================================ */
 
 .passioni {
-  background: linear-gradient(180deg, rgba(7,31,56,0.98) 0%, rgba(7,31,56,0.96) 100%);
+  background: linear-gradient(180deg, rgba(7,31,56,0.98) 0%, rgba(7,31,56,0.98) 100%);
+  color: var(--color-ink);
 }
 
 .passioni-intro {
@@ -474,11 +478,11 @@ p { max-width: 70ch; }
 }
 
 .passione-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 22px 56px rgba(0,0,0,0.18);
+  box-shadow: 0 22px 56px rgba(0,0,0,0.2);
   display: flex;
   flex-direction: column;
 }
@@ -589,10 +593,10 @@ p { max-width: 70ch; }
 }
 
 .subject-card {
-  background: var(--color-surface);
+  background: rgba(18,34,58,0.96);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.14);
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
   display: flex;
   flex-direction: column;
@@ -628,6 +632,7 @@ p { max-width: 70ch; }
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
+  color: var(--color-ink);
 }
 
 .subject-card-body h3 { color: var(--color-ink); }
@@ -733,8 +738,8 @@ p { max-width: 70ch; }
 
 .pcto-mansione,
 .skills-block li {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
 }
 
 .pcto-mansione {
@@ -789,8 +794,8 @@ p { max-width: 70ch; }
 }
 
 .riflessione {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.14);
   border-left: 4px solid var(--color-accent);
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   padding: 2rem 2.5rem;
@@ -815,10 +820,11 @@ p { max-width: 70ch; }
 
 .contatti-block {
   padding: 2rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.14);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
+  color: var(--color-ink);
 }
 
 .contatti-block h2 { margin-bottom: 1.5rem; }
