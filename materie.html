@@ -45,146 +45,106 @@
   <main>
     <section class="section-pad" aria-labelledby="materie-title">
       <div class="container">
-        <p style="color:var(--color-muted);margin-bottom:3.5rem;font-size:1.05rem;max-width:65ch;">Le materie del quinto anno al Marconi Pieralisi si dividono tra area tecnica e area umanistica. Per ognuna: una descrizione rapida e gli argomenti principali che abbiamo affrontato durante l'anno.</p>
+        <h2 id="materie-title" class="sr-only" style="position:absolute;left:-9999px;">Elenco delle materie</h2>
+        <p class="materie-intro">Le materie del quinto anno al Marconi Pieralisi si dividono tra area tecnica e area umanistica. Seleziona una materia dall'elenco per vederne descrizione e argomenti principali.</p>
 
-        <!-- Area scientifica/tecnica -->
-        <div class="materie-section fade-in">
-          <span class="section-label">Area scientifica e tecnica</span>
-          <h2 id="materie-title">Scientifico-Tecnica</h2>
-          <p class="materie-section-desc">Programmazione, reti, sistemi, matematica e intelligenza artificiale.</p>
-          <div class="subjects-grid">
+        <div class="materie-layout fade-in">
 
-            <a href="materia-informatica.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-informatica.jpg" alt="Informatica" loading="lazy">
-              </div>
-              <div class="subject-card-body">
-                <h3>Informatica</h3>
-                <p>Sviluppo web full-stack, basi di dati relazionali e progetto reale Scout Admin con Git e lavoro in team.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
+          <!-- SIDEBAR: elenco materie cliccabili -->
+          <aside class="materie-sidebar" aria-label="Elenco materie">
 
-            <a href="materia-sistemi-reti.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-sistemi-reti.jpg" alt="Sistemi e Reti" loading="lazy">
+            <div class="materie-group">
+              <span class="section-label">Area scientifica e tecnica</span>
+              <div class="materia-list" role="list">
+                <a href="materia-informatica.html" class="materia-item" role="listitem"
+                   data-title="Informatica"
+                   data-img="immagini/materia-informatica.jpg"
+                   data-desc="Sviluppo web full-stack, basi di dati relazionali e progetto reale Scout Admin con Git e lavoro in team.">
+                  <span class="materia-num">01</span><span class="materia-item-title">Informatica</span>
+                </a>
+                <a href="materia-sistemi-reti.html" class="materia-item" role="listitem"
+                   data-title="Sistemi e Reti"
+                   data-img="immagini/materia-sistemi-reti.jpg"
+                   data-desc="Reti locali, Internet, sicurezza e crittografia: algoritmi, certificati e protocolli sicuri.">
+                  <span class="materia-num">02</span><span class="materia-item-title">Sistemi e Reti</span>
+                </a>
+                <a href="materia-tpsit.html" class="materia-item" role="listitem"
+                   data-title="TPSIT"
+                   data-img="immagini/materia-tpsit.jpg"
+                   data-desc="Programmazione concorrente in Java: thread, sincronizzazione e problemi classici come produttore-consumatore.">
+                  <span class="materia-num">03</span><span class="materia-item-title">TPSIT</span>
+                </a>
+                <a href="materia-gpoi.html" class="materia-item" role="listitem"
+                   data-title="GPOI"
+                   data-img="immagini/materia-gpoi.jpg"
+                   data-desc="Gestione dei progetti, Gantt, Scrum, Kanban e documentazione completa del progetto Scout Admin.">
+                  <span class="materia-num">04</span><span class="materia-item-title">GPOI</span>
+                </a>
+                <a href="materia-matematica.html" class="materia-item" role="listitem"
+                   data-title="Matematica"
+                   data-img="immagini/materia-matematica.jpg"
+                   data-desc="Ragionamento prima del calcolo: la probabilità come modo di pensare, non solo di applicare formule.">
+                  <span class="materia-num">05</span><span class="materia-item-title">Matematica</span>
+                </a>
+                <a href="materia-ia.html" class="materia-item" role="listitem"
+                   data-title="Intelligenza Artificiale"
+                   data-img="immagini/materia-ia.jpg"
+                   data-desc="Machine learning, reti neurali e sviluppo concreto di un modello di apprendimento in Python.">
+                  <span class="materia-num">06</span><span class="materia-item-title">Intelligenza Artificiale</span>
+                </a>
               </div>
-              <div class="subject-card-body">
-                <h3>Sistemi e Reti</h3>
-                <p>Reti locali, Internet, sicurezza e crittografia: algoritmi, certificati e protocolli sicuri.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
+            </div>
 
-            <a href="materia-tpsit.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-tpsit.jpg" alt="TPSIT" loading="lazy">
+            <div class="materie-group">
+              <span class="section-label">Area umanistica</span>
+              <div class="materia-list" role="list">
+                <a href="materia-italiano.html" class="materia-item" role="listitem"
+                   data-title="Italiano"
+                   data-img="immagini/materia-italiano.jpg"
+                   data-desc="Letteratura tra Ottocento e Novecento: Pirandello, le maschere e il tema dell'identità che non smetti di portarti dietro.">
+                  <span class="materia-num">07</span><span class="materia-item-title">Italiano</span>
+                </a>
+                <a href="materia-storia.html" class="materia-item" role="listitem"
+                   data-title="Storia"
+                   data-img="immagini/materia-storia.jpg"
+                   data-desc="Il Novecento e la Seconda Guerra Mondiale: totalitarismi, responsabilità e la fragilità delle strutture civili.">
+                  <span class="materia-num">08</span><span class="materia-item-title">Storia</span>
+                </a>
+                <a href="materia-inglese.html" class="materia-item" role="listitem"
+                   data-title="Inglese"
+                   data-img="immagini/materia-inglese.jpg"
+                   data-desc="Letteratura e Technical English: Oscar Wilde e Il Ritratto di Dorian Gray, un libro che ti aspetti per obbligo e invece ti rimane.">
+                  <span class="materia-num">09</span><span class="materia-item-title">Inglese</span>
+                </a>
               </div>
-              <div class="subject-card-body">
-                <h3>TPSIT</h3>
-                <p>Programmazione concorrente in Java: thread, sincronizzazione e problemi classici come produttore-consumatore.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
+            </div>
 
-            <a href="materia-gpoi.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-gpoi.jpg" alt="GPOI" loading="lazy">
+            <div class="materie-group">
+              <span class="section-label">Altro</span>
+              <div class="materia-list" role="list">
+                <a href="materia-scienze-motorie.html" class="materia-item" role="listitem"
+                   data-title="Scienze Motorie"
+                   data-img="immagini/materia-scienze-motorie.jpg"
+                   data-desc="Sport, benessere e le lezioni libere di calcio — non esattamente una fatica per chi gioca da quando aveva 8 anni.">
+                  <span class="materia-num">10</span><span class="materia-item-title">Scienze Motorie</span>
+                </a>
               </div>
-              <div class="subject-card-body">
-                <h3>GPOI</h3>
-                <p>Gestione dei progetti, Gantt, Scrum, Kanban e documentazione completa del progetto Scout Admin.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
+            </div>
 
-            <a href="materia-matematica.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-matematica.jpg" alt="Matematica" loading="lazy">
-              </div>
-              <div class="subject-card-body">
-                <h3>Matematica</h3>
-                <p>Ragionamento prima del calcolo: la probabilità come modo di pensare, non solo di applicare formule.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
+          </aside>
 
-            <a href="materia-ia.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-ia.jpg" alt="Intelligenza Artificiale" loading="lazy">
-              </div>
-              <div class="subject-card-body">
-                <h3>Intelligenza Artificiale</h3>
-                <p>Machine learning, reti neurali e sviluppo concreto di un modello di apprendimento in Python.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
+          <!-- DETTAGLIO: cambia al click (prefill = prima materia per chi non ha JS) -->
+          <article class="materia-detail" id="materia-detail" aria-live="polite">
+            <div class="materia-detail-img">
+              <img src="immagini/materia-informatica.jpg" alt="Informatica" loading="lazy">
+            </div>
+            <div class="materia-detail-body">
+              <h2 class="materia-detail-title">Informatica</h2>
+              <p class="materia-detail-desc">Sviluppo web full-stack, basi di dati relazionali e progetto reale Scout Admin con Git e lavoro in team.</p>
+              <a href="materia-informatica.html" class="materia-detail-link">Approfondisci →</a>
+            </div>
+          </article>
 
-          </div>
-        </div>
-
-        <!-- Area umanistica -->
-        <div class="materie-section fade-in" style="margin-top:4rem;">
-          <span class="section-label">Area umanistica</span>
-          <h2>Umanistica</h2>
-          <p class="materie-section-desc">Letteratura, storia, lingua inglese.</p>
-          <div class="subjects-grid">
-
-            <a href="materia-italiano.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-italiano.jpg" alt="Italiano" loading="lazy">
-              </div>
-              <div class="subject-card-body">
-                <h3>Italiano</h3>
-                <p>Letteratura tra Ottocento e Novecento: Pirandello, le maschere e il tema dell'identità che non smetti di portarti dietro.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
-
-            <a href="materia-storia.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-storia.jpg" alt="Storia" loading="lazy">
-              </div>
-              <div class="subject-card-body">
-                <h3>Storia</h3>
-                <p>Il Novecento e la Seconda Guerra Mondiale: totalitarismi, responsabilità e la fragilità delle strutture civili.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
-
-            <a href="materia-inglese.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-inglese.jpg" alt="Inglese" loading="lazy">
-              </div>
-              <div class="subject-card-body">
-                <h3>Inglese</h3>
-                <p>Letteratura e Technical English: Oscar Wilde e Il Ritratto di Dorian Gray, un libro che ti aspetti per obbligo e invece ti rimane.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
-
-          </div>
-        </div>
-
-        <!-- Altro -->
-        <div class="materie-section fade-in" style="margin-top:4rem;">
-          <span class="section-label">Altro</span>
-          <h2>Altre materie</h2>
-          <p class="materie-section-desc">Scienze motorie e benessere fisico.</p>
-          <div class="subjects-grid" style="max-width:380px;">
-
-            <a href="materia-scienze-motorie.html" class="subject-card">
-              <div class="subject-card-img">
-                <img src="immagini/materia-scienze-motorie.jpg" alt="Scienze Motorie" loading="lazy">
-              </div>
-              <div class="subject-card-body">
-                <h3>Scienze Motorie</h3>
-                <p>Sport, benessere e le lezioni libere di calcio — non esattamente una fatica per chi gioca da quando aveva 8 anni.</p>
-                <span class="subject-card-link">Approfondisci →</span>
-              </div>
-            </a>
-
-          </div>
         </div>
 
       </div>
