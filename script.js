@@ -1,3 +1,4 @@
+document.body.classList.add('js');
 const toggle = document.querySelector('.nav-toggle');
 const mobileMenu = document.querySelector('.nav-mobile');
 

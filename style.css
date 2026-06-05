@@ -927,12 +927,17 @@ p { max-width: 70ch; }
    ============================================================ */
 
 .fade-in {
-  opacity: 0;
-  transform: translateY(18px);
+  opacity: 1;
+  transform: none;
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
-.fade-in.visible {
+.js .fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.js .fade-in.visible {
   opacity: 1;
   transform: none;
 }
